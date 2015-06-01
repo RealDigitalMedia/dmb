@@ -5,16 +5,18 @@
     <title>Sandwich Demo</title>
     <link rel="stylesheet" type="text/css" href="css/structure-demo.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/framework-demo.css" media="all" />
+
+    <!-- Before production I would download these and store/load locally from the js folder -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="http://www.jsviews.com/download/jsrender.js"></script>
   </head>
 
   <body id="portrait-sandwich">
-    <div class="column_header" id="price1">
+    <div class="column_header">
       <!-- This will be filled in via the #priceTemplate in script -->
     </div>
 
-    <div class="column_header" id="price2">
+    <div class="column_header">
       <!-- This will be filled in via the #priceTemplate in script -->
     </div>
 
@@ -24,20 +26,17 @@
 
     <div id="legend">
       <div class="row">
-        <div class="span1 text-center"><img src="images/icon-house.png" width="50" height="50"></div>
-        <div class="span3">
-          <p class="mega uppercase text-dark pad-text">Specialty</p>
-        </div>
-        <div class="span1 text-center"><img src="images/icon-veg.png" width="50" height="50"></div>
-        <div class="span3">
-          <p class="mega uppercase text-dark pad-text">Vegetarian</p>
-        </div>
-        <div class="span1 text-center"><img src="images/icon-hot.png" width="50" height="50"></div>
-        <div class="span3">
-          <p class="mega uppercase text-dark pad-text">Spicy</p>
-        </div>
+        <!-- This will be filled in via repeatedly appling and appending #legendItem in script -->
       </div>
     </div>
+
+    <!-- Templates start here -->
+    <script id="legendItem" type="text/x-jsrender">
+      <div class="span1 text-center"><img src="images/icon-{{:icon}}.png" width="50" height="50"></div>
+      <div class="span3">
+        <p class="mega uppercase text-dark pad-text">{{:name}}</p>
+      </div>
+    </script>
 
     <script id="priceTemplate" type="text/x-jsrender">
       <div class="row">
@@ -73,6 +72,7 @@
       </div>
     </script>
 
+    <!-- Script to load and process the templates -->
     <script src="js/templates.js"></script>
   </body>
 </html>
