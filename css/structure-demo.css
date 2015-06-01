@@ -1,0 +1,244 @@
+
+
+#header {
+	background-color: #E2383F;
+	width:1920px;
+	padding-top:0px;
+	height:184px;
+	position: absolute;
+	left:0px;
+	top:0px;
+	margin-bottom:0px;
+}
+
+#logo {
+	width:292px;
+	padding-top:0px;
+	height:184px;
+	position: absolute;
+	left:405px;
+	top:34px;
+	margin-bottom:0px;
+}
+
+
+#icon {
+	background:url(../images/icon.png);
+	width:188px;
+	padding-top:0px;
+	height:170px;
+	position: absolute;
+	left:0px;
+	top:74px;
+	margin-bottom:0px;
+}
+
+/* Embedded Fonts */
+
+@font-face {
+  font-family: 'Metropolis';
+  src: local('Metropolis'), url('../fonts/metropolis1920.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url('../fonts/metropolis1920.otf');
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: local('Arial'), url('../fonts/arial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Arial;
+    src: url('../fonts/arial.ttf');
+}
+
+@font-face {
+  font-family: 'ArialBlack';
+  src: local('Ariblk'), url('../fonts/ariblk.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ArialBlack;
+    src: url('../fonts/ariblk.ttf');
+}
+
+@font-face {
+  font-family: 'Tartine';
+  src: local('Tartine'), url('../fonts/tartinescriptblack.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: tartine;
+    src: url('../fonts/tartinescriptblack.ttf');
+}
+
+
+/* Section Positioning */
+
+.container {
+	padding: 10px;
+	border:#000000 1px solid;
+}
+
+#price1 {
+position: absolute;
+	left:70px;
+	top:285px;
+	width: 450px;
+}
+
+#price2 {
+position: absolute;
+	left:625px;
+	top:285px;
+	width: 450px;
+}
+
+#section1 {
+	position: absolute;
+	left:70px;
+	top:515px;
+	width: 450px;
+}
+
+#section2 {
+	position: absolute;
+	left:70px;
+	top:740px;
+	width: 450px;
+}
+
+#section3 {
+	position: absolute;
+	left:70px;
+	top:962px;
+	width: 450px;
+}
+
+#section4 {
+	position: absolute;
+	left:70px;
+	top:1185px;
+	width: 450px;
+}
+
+#section5 {
+	position: absolute;
+	left:70px;
+	top:1415px;
+	width: 450px;
+}
+
+#section6 {
+	position: absolute;
+	left:70px;
+	top:1640px;
+	width: 450px;
+}
+
+#section7 {
+	position: absolute;
+	left:625px;
+	top:515px;
+	width: 450px;
+}
+
+#section8 {
+	position: absolute;
+	left:625px;
+	top:740px;
+	width: 450px;
+}
+
+#section9 {
+	position: absolute;
+	left:625px;
+	top:962px;
+	width: 450px;
+}
+
+#section10 {
+	position: absolute;
+	left:625px;
+	top:1190px;
+	width: 450px;
+}
+
+#section11 {
+	position: absolute;
+	left:625px;
+	top:1415px;
+	width: 450px;
+}
+
+#section12 {
+	position: absolute;
+	left:625px;
+	top:1640px;
+	width: 450px;
+}
+
+#legend {
+	position: absolute;
+	left: 0px;
+	top: 1870px;
+	width: 1080px;
+}
+
+/* Combos */
+
+#combo1 {
+	position: absolute;
+	left:38px;
+	top:190px;
+	width: 500px;
+	z-index:-10;
+}
+
+#combo2 {
+	position: absolute;
+	left:541px;
+	top:190px;
+	width: 500px;
+	z-index:-10;
+}
+
+#combo3 {
+	position: absolute;
+	left:38px;
+	top:706px;
+	width: 500px;
+	z-index:-10;
+}
+
+#combo4 {
+	position: absolute;
+	left:541px;
+	top:706px;
+	width: 500px;
+	z-index:-10;
+}
+
+#combo5 {
+	position: absolute;
+	left:38px;
+	top:1223px;
+	width: 500px;
+	z-index:-10;
+}
+
+#combo6 {
+	position: absolute;
+	left:541px;
+	top:1223px;
+	width: 500px;
+	z-index:-10;
+}
+
+
+
+
+

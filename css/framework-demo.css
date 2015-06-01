@@ -1,0 +1,176 @@
+/*!
+ * Bootstrap v3.1.1 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com  */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box} 
+
+/* article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none} */
+
+/* End Reset */
+
+html{font-size:100%;}
+body{margin:0; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}
+
+#portrait-sandwich {width:1080px; max-height:1920px; background-image:url(../images/bg-dmb-sandwich.png); background-repeat:no-repeat;}
+#portrait-salads {width:1080px; max-height:1920px; background-image:url(../images/bg-dmb-salads.png); background-repeat:no-repeat;}
+
+img{vertical-align:middle} 
+
+/* Embedded Fonts */
+
+@font-face {
+    font-family: TradeGothic;
+    src: url('../fonts/tradegothic.ttf');
+}
+
+@font-face {
+    font-family: TradeGothicOblique;
+    src: url('../fonts/Trade Gothic Oblique.ttf');
+}
+
+@font-face {
+    font-family: TradeGothicBold;
+    src: url('../fonts/Trade Gothic Bold No. 2 Oblique.ttf');
+}
+
+/* Typography */
+
+h1{font-size:2em;margin:.67em 0}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small,.h1 .small,.h2 .small,.h3 .small,.h4 .small,.h5 .small,.h6 .small{font-weight:400;line-height:1;color:#999}
+h1,.h1,h2,.h2,h3,.h3{margin-top:20px;margin-bottom:10px}
+h1 small,.h1 small,h2 small,.h2 small,h3 small,.h3 small,h1 .small,.h1 .small,h2 .small,.h2 .small,h3 .small,.h3 .small{font-size:65%}
+h4,.h4,h5,.h5,h6,.h6{margin-top:10px;margin-bottom:10px}
+h4 small,.h4 small,h5 small,.h5 small,h6 small,.h6 small,h4 .small,.h4 .small,h5 .small,.h5 .small,h6 .small,.h6 .small{font-size:75%}
+h1,.h1{font-size:36px}
+h2,.h2{font-size:30px}
+h3,.h3{font-size:24px}
+h4,.h4{font-size:18px}
+h5,.h5{font-size:14px}
+h6,.h6{font-size:12px}
+
+hr {border:2px solid #F1C586;}
+
+p{font-family:TradeGothicBold;}
+p.section{font-size:72px; color:#FFF;}
+
+p{margin:0px; padding-bottom:0px;}
+p.yotta{font-size: 10em;}
+p.zetta{font-size: 8em;}
+p.exa{font-size: 6em;}
+p.peta{font-size: 5em;}
+p.tera{font-size: 4em;}
+p.giga{font-size: 3em;}
+p.mega{font-size: 2em;}
+p.kilo{font-size: 1.5em;}
+p.hecto{font-size: 1em;}
+p.deca{font-size: .5em;}
+
+.kern-tight{letter-spacing: -.025em;}
+.kern-loose{letter-spacing: .025em;}
+
+.text-right{text-align:right}
+.text-center{text-align:center}
+.text-justify{text-align:justify}
+
+.text-dark{color:black;}
+.text-darkgray{color:darkgray;}
+.text-lightgray{color:lightgray;}
+.text-light{color:white;}
+.text-red{color:#C60000;}
+
+.shadow {
+	text-shadow: 2px 2px 3px rgba(0,0,0, 1);
+-moz-text-shadow: 2px 2px 3px rgba(0,0,0, 1);
+-webkit-text-shadow: 2px 2px 3px rgba(0,0,0, 1);
+}
+
+.glow {
+	text-shadow: 0 0 10px #F1C586;
+}
+
+.calbox {
+	background-color: #c60000;
+	padding:5px;
+}
+	
+
+.text-muted{color:#999}
+.text-primary{color:CornflowerBlue;}
+.text-secondary{color: #cc0000;}
+
+.uppercase{text-transform:uppercase;}
+.italic{font-style: italic;}
+
+/* Lists */
+
+ul,ol{margin-top:0;margin-bottom:10px}
+ul ul,ol ul,ul ol,ol ol{margin-bottom:0}
+.list-unstyled{padding-left:0;list-style:none}
+.list-inline{padding-left:0;list-style:none;margin-left:-5px}
+.list-inline>li{display:inline-block;padding-left:5px;padding-right:5px}dl{margin-top:0;margin-bottom:20px}dt,dd{line-height:1.5}dt{font-weight:0}dd{margin-left:0}
+
+.section {margin:0px;}
+.item dl {list-style-type: none;}
+.item dl dt {float:left;}
+.item dl dd {text-align:right;}
+
+/* Structures */
+
+.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
+.row{margin:0px; clear:both;}
+.span1,.span2,.span3,.span4,.span5,.span6.span7,.span8,.span9,.span10,.span11,.span12{position:relative;min-height:1px;}
+
+.span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12{float:left; border: 0px solid #999;}
+.span12{width:100%;}
+.span11{width:91.66666667%}
+.span10{width:83.33333333%}
+.span9{width:75%}
+.span8{width:66.66666667%}
+.span7{width:58.33333333%}
+.span6{width:50%}
+.span5{width:41.66666667%}
+.span4{width:33.33333333%}
+.span3{width:25%}
+.span2{width:16.66666667%}
+.span1{width:8.33333333%}
+
+.pad{padding:0px 0px 0px 0px;}
+.pad-desc{padding:0px 0px 20px 0px;}
+.pad-item {padding:0px 0px 10px 0px;}
+.pad-text {padding:10px 0px 0px 0px;}
+.pad-cal {padding:0px 0px 20px 0px;}
+
+
+.offset12{margin-left:100%}
+.offset11{margin-left:91.66666667%}
+.offset10{margin-left:83.33333333%}
+.offset9{margin-left:75%}
+.offset8{margin-left:66.66666667%}
+.offset7{margin-left:58.33333333%}
+.offset6{margin-left:50%}
+.offset5{margin-left:41.66666667%}
+.offset4{margin-left:33.33333333%}
+.offset3{margin-left:25%}
+.offset2{margin-left:16.66666667%}
+.offset1{margin-left:8.33333333%}
+.offset0{margin-left:0}
+
+.vertical-s{height:2em;}
+.vertical-m{height:3em;}
+.vertical-l{height:5em;}
+.vertical-xl{height:10em;}
+.vertical-xxl{height:15em;}
+.vertical-xxxl{height:20em;}
+
+
