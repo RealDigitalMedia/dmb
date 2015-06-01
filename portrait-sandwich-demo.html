@@ -72,7 +72,14 @@
       </div>
     </script>
 
+    <!-- load a local neocast-data.js for dev mode, load from the server
+         for production mode. Do not include js/neocast-data.js in the build -->
+    <script src="neocast://data.js" type="text/javascript"></script>
+    <script src="js/desktop-development-data.js" type="text/javascript"></script>
+    <script src="js/neocast-data.js" type="text/javascript"></script>
+
     <!-- Script to load and process the templates -->
     <script src="js/templates.js"></script>
   </body>
 </html>
+
