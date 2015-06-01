@@ -1,101 +1,78 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Sandwich Demo</title>
-<link rel="stylesheet" type="text/css" href="css/structure-demo.css" media="all" />
-<link rel="stylesheet" type="text/css" href="css/framework-demo.css" media="all" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="http://www.jsviews.com/download/jsrender.js"></script>
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Sandwich Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/structure-demo.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/framework-demo.css" media="all" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://www.jsviews.com/download/jsrender.js"></script>
+  </head>
 
-<body id="portrait-sandwich">
-
-<script id="priceTemplate" type="text/x-jsrender">
-  <div class="row">
-    <div class="span10">
-      <p class="tera uppercase text-red text-center">
-      <span id="type-{{:index}}"></span>
-      </p>
+  <body id="portrait-sandwich">
+    <div class="column_header" id="price1">
+      <!-- This will be filled in via the #priceTemplate in script -->
     </div>
-    <div class="span10 pad-desc">
-      <p class="giga text-red text-center">
-      <span id="price-{{:index}}"></span>
-    </div>
-  </div>
-</script>
 
-<script id="sectionTemplate" type="text/x-jsrender">
-  <div id="section{{:index}}">
-    <div class="row">
-      <div class="span12">
-        <p class="mega uppercase text-dark"><span id="item-{{:index}}"></span></p>
+    <div class="column_header" id="price2">
+      <!-- This will be filled in via the #priceTemplate in script -->
+    </div>
+
+    <div id="sectionContainer">
+      <!-- This will be filled in via repeatedly appling and appending #sectionTemplate in script -->
+    </div>
+
+    <div id="legend">
+      <div class="row">
+        <div class="span1 text-center"><img src="images/icon-house.png" width="50" height="50"></div>
+        <div class="span3">
+          <p class="mega uppercase text-dark pad-text">Specialty</p>
+        </div>
+        <div class="span1 text-center"><img src="images/icon-veg.png" width="50" height="50"></div>
+        <div class="span3">
+          <p class="mega uppercase text-dark pad-text">Vegetarian</p>
+        </div>
+        <div class="span1 text-center"><img src="images/icon-hot.png" width="50" height="50"></div>
+        <div class="span3">
+          <p class="mega uppercase text-dark pad-text">Spicy</p>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="span10 pad-desc">
-        <p class="kilo text-dark"><span id="desc-{{:index}}"></span>
+
+    <script id="priceTemplate" type="text/x-jsrender">
+      <div class="row">
+        <div class="span10">
+          <p class="tera uppercase text-red text-center">
+            <span id="type-{{:index}}"></span>
+          </p>
+        </div>
+        <div class="span10 pad-desc">
+          <p class="giga text-red text-center">
+          <span id="price-{{:index}}"></span>
       </div>
-      <div class="span2"><span id="category"></span></div>
-    </div>
-    <div class="row">
-      <div class="span6 calbox">
-        <p class="kilo text-light text-center"><span id="cal-{{:index}}"></span>
+    </script>
+
+    <script id="sectionTemplate" type="text/x-jsrender">
+      <div id="section{{:index}}">
+        <div class="row">
+          <div class="span12">
+            <p class="mega uppercase text-dark"><span id="item-{{:index}}"></span></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span10 pad-desc">
+            <p class="kilo text-dark"><span id="desc-{{:index}}"></span>
+          </div>
+          <div class="span2"><span id="category"></span></div>
+        </div>
+        <div class="row">
+          <div class="span6 calbox">
+            <p class="kilo text-light text-center"><span id="cal-{{:index}}"></span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</script>
+    </script>
 
-<script>
-  $(document).ready(function()
-  {
-    $.templates("priceTemplate",   "#priceTemplate");
-    $.templates("sectionTemplate", "#sectionTemplate");
-
-    $(".column_header").each(function(index, element)
-    {
-       var html = $.render.priceTemplate({index: index + 1});
-       $(this).html(html);
-    });
-
-    for(var index=1; index <= 12; index++)
-    {
-       var html = $.render.sectionTemplate({index: index});
-       $("#sectionContainer").append(html);
-    }
-  });
-</script>
-
-<div class="column_header" id="price1">
-  <!-- This will be filled in via the #priceTemplate in script -->
-</div>
-
-<div class="column_header" id="price2">
-  <!-- This will be filled in via the #priceTemplate in script -->
-</div>
-
-<div id="sectionContainer">
-  <!-- This will be filled in via repeatedly appling and appending #sectionTemplate in script -->
-</div>
-
-<div id="legend">
-    <div class="row">
-      <div class="span1 text-center"><img src="images/icon-house.png" width="50" height="50"></div>
-      <div class="span3">
-        <p class="mega uppercase text-dark pad-text">Specialty</p>
-      </div>
-      <div class="span1 text-center"><img src="images/icon-veg.png" width="50" height="50"></div>
-      <div class="span3">
-        <p class="mega uppercase text-dark pad-text">Vegetarian</p>
-      </div>
-      <div class="span1 text-center"><img src="images/icon-hot.png" width="50" height="50"></div>
-      <div class="span3">
-        <p class="mega uppercase text-dark pad-text">Spicy</p>
-      </div>
-    </div>
-</div>
-
-
-</div>
-</body>
+    <script src="js/templates.js"></script>
+  </body>
 </html>
