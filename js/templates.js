@@ -56,18 +56,18 @@ $(document).ready(function()
     // -- use that to lookup the label, desc, and calories
     //    in the metadata using the value retrieved as the
     //    root of the key name.
-
-    var a = index;
-    NEOCAST.data.player('item-' + a, function(item_key)
-    {
-      // Create a local scope variable to capture the index for use inside the closure below
-      var b = a;
-      console.log("Setting up hook ups for item-" + b);
-      NEOCAST.data.player(item_key,           function(value) { console.log("Change event for " + item_key + " with a value of "      + value + " into dom id #item-" + b); $("#item-" + b).html(value); });
-      NEOCAST.data.player(item_key + "_desc", function(value) { console.log("Change event for " + item_key + "_desc with a value of " + value + " into dom id #desc-" + b); $("#desc-" + b).html(value); });
-      NEOCAST.data.player(item_key + "_cal",  function(value) { console.log("Change event for " + item_key + "_cal with a value of "  + value + " into dom id #cal-"  + b); $("#cal-"  + b).html(value); });
-    });
   }
+
+  setInterval(function()
+  {
+    for(var index=1; index <= 12; index++)
+    {
+      var item_key = NEOCAST.data.player('item-' + index);
+
+      var label = NEOCAST.data.player(item_key);,           console.log("Change event for " + item_key + " with a value of "      + label + " into dom id #item-" + index); $("#item-" + index).html(label); });
+      var desc  = NEOCAST.data.player(item_key + "_desc");  console.log("Change event for " + item_key + "_desc with a value of " + desc  + " into dom id #desc-" + index); $("#desc-" + index).html(desc);  });
+      var cal   = NEOCAST.data.player(item_key + "_cal");   console.log("Change event for " + item_key + "_cal with a value of "  + cal   + " into dom id #cal-"  + index); $("#cal-"  + index).html(cal);   });
+  }, 1000);
 
   $(legend).each(function(index, templateData)
   {
