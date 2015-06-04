@@ -58,13 +58,9 @@ $(document).ready(function()
     //    root of the key name.
     NEOCAST.data.player('item-' + index, function(item_key)
     {
-      var label = NEOCAST.data.player(item_key);
-      var desc  = NEOCAST.data.player(item_key + "_desc");
-      var cal   = NEOCAST.data.player(item_key + "_cal");
-
-      $("#item-" + index).html(label);
-      $("#desc-" + index).html(desc);
-      $("#cal-"  + index).html(cal);
+      NEOCAST.data.player(item_key,           function(value) { $("#item-" + index).html(value); });
+      NEOCAST.data.player(item_key + "_desc", function(value) { $("#desc-" + index).html(value); });
+      NEOCAST.data.player(item_key + "_cal",  function(value) { $("#cal-"  + index).html(value); });
     });
   }
 
