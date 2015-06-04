@@ -59,9 +59,9 @@ $(document).ready(function()
     NEOCAST.data.player('item-' + index, function(item_key)
     {
       console.log("Setting up hook ups for item-" + index);
-      NEOCAST.data.player(item_key,           function(value) { console.log("Setting up sub hook ups for " + item_key);           $("#item-" + index).html(value); });
-      NEOCAST.data.player(item_key + "_desc", function(value) { console.log("Setting up sub hook ups for " + item_key + "_desc"); $("#desc-" + index).html(value); });
-      NEOCAST.data.player(item_key + "_cal",  function(value) { console.log("Setting up sub hook ups for " + item_key + "_cal");  $("#cal-"  + index).html(value); });
+      NEOCAST.data.player(item_key,           function(value) { console.log("Change event for " + item_key + " with a value of " + value);      $("#item-" + index).html(value); });
+      NEOCAST.data.player(item_key + "_desc", function(value) { console.log("Change event for " + item_key + "_desc with a value of " + value); $("#desc-" + index).html(value); });
+      NEOCAST.data.player(item_key + "_cal",  function(value) { console.log("Change event for " + item_key + "_cal with a value of " + value);  $("#cal-"  + index).html(value); });
     });
   }
 
