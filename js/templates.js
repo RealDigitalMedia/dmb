@@ -56,12 +56,13 @@ $(document).ready(function()
     // -- use that to lookup the label, desc, and calories
     //    in the metadata using the value retrieved as the
     //    root of the key name.
-    NEOCAST.data.player('item-' + index, function(item_key)
+    var current_index = index
+    NEOCAST.data.player('item-' + current_index, function(item_key)
     {
-      console.log("Setting up hook ups for item-" + index);
-      NEOCAST.data.player(item_key,           function(value) { console.log("Change event for " + item_key + " with a value of "      + value + " into dom id #item-" + index); $("#item-" + index).html(value); });
-      NEOCAST.data.player(item_key + "_desc", function(value) { console.log("Change event for " + item_key + "_desc with a value of " + value + " into dom id #desc-" + index); $("#desc-" + index).html(value); });
-      NEOCAST.data.player(item_key + "_cal",  function(value) { console.log("Change event for " + item_key + "_cal with a value of "  + value + " into dom id #cal-"  + index); $("#cal-"  + index).html(value); });
+      console.log("Setting up hook ups for item-" + current_index);
+      NEOCAST.data.player(item_key,           function(value) { console.log("Change event for " + item_key + " with a value of "      + value + " into dom id #item-" + current_index); $("#item-" + current_index).html(value); });
+      NEOCAST.data.player(item_key + "_desc", function(value) { console.log("Change event for " + item_key + "_desc with a value of " + value + " into dom id #desc-" + current_index); $("#desc-" + current_index).html(value); });
+      NEOCAST.data.player(item_key + "_cal",  function(value) { console.log("Change event for " + item_key + "_cal with a value of "  + value + " into dom id #cal-"  + current_index); $("#cal-"  + current_index).html(value); });
     });
   }
 
