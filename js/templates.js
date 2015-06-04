@@ -49,18 +49,23 @@ $(document).ready(function()
     var templateData = { index: index };
     var html = $.render.sectionTemplate(templateData);
     $("#sectionContainer").append(html);
-
     // I would optimize this (for a good JS coder) to:
     //$("#sectionContainer").append($.render.sectionTemplate({index: index});
 
-    // Display the item, description and calorie info whenever loaded
-    setup_dom_element_to_refresh_its_value_from_same_named_neocast_key("item-" + index);
-    setup_dom_element_to_refresh_its_value_from_same_named_neocast_key("desc-" + index);
-    setup_dom_element_to_refresh_its_value_from_same_named_neocast_key("cal-" + index);
-    // ^^^^^^ this is a shortcut for the following:
-    // NEOCAST.data.player("item-" + index, function(value) { $("#item-" + index).html(value); });
-    // NEOCAST.data.player("desc-" + index, function(value) { $("#desc-"  + index).html(value); });
-    // NEOCAST.data.player("cal-"  + index, function(value) { $("#cal-"   + index).html(value); });
+    // Lookup the value for the item for this entry
+    // -- use that to lookup the label, desc, and calories
+    //    in the metadata using the value retrieved as the
+    //    root of the key name.
+    NEOCAST.data.player('item-' + index, function(item_key)
+    {
+      var label = NEOCAST.data.player(item_key);
+      var desc  = NEOCAST.data.player(item_key + "_desc");
+      var cal   = NEOCAST.data.player(item_key + "_cal");
+
+      $("#item-" + index).html(label);
+      $("#desc-" + index).html(desc);
+      $("#cal-"  + index).html(cal);
+    );
   }
 
   $(legend).each(function(index, templateData)
