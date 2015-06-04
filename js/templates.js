@@ -64,9 +64,9 @@ $(document).ready(function()
     {
       var item_key = NEOCAST.data.player('item-' + index);
 
-      var label = NEOCAST.data.player(item_key);            console.log("Change event for " + item_key + " with a value of "      + label + " into dom id #item-" + index); $("#item-" + index).html(label); });
-      var desc  = NEOCAST.data.player(item_key + "_desc");  console.log("Change event for " + item_key + "_desc with a value of " + desc  + " into dom id #desc-" + index); $("#desc-" + index).html(desc);  });
-      var cal   = NEOCAST.data.player(item_key + "_cal");   console.log("Change event for " + item_key + "_cal with a value of "  + cal   + " into dom id #cal-"  + index); $("#cal-"  + index).html(cal);   });
+      var label = NEOCAST.data.player(item_key);            console.log("Change event for " + item_key + " with a value of "      + label + " into dom id #item-" + index); $("#item-" + index).html(label);
+      var desc  = NEOCAST.data.player(item_key + "_desc");  console.log("Change event for " + item_key + "_desc with a value of " + desc  + " into dom id #desc-" + index); $("#desc-" + index).html(desc);
+      var cal   = NEOCAST.data.player(item_key + "_cal");   console.log("Change event for " + item_key + "_cal with a value of "  + cal   + " into dom id #cal-"  + index); $("#cal-"  + index).html(cal);
   }, 1000);
 
   $(legend).each(function(index, templateData)
