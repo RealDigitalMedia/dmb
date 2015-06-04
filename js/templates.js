@@ -57,14 +57,15 @@ $(document).ready(function()
     //    in the metadata using the value retrieved as the
     //    root of the key name.
 
-    NEOCAST.data.player('item-' + index, function(item_key)
+    var a = index;
+    NEOCAST.data.player('item-' + a, function(item_key)
     {
       // Create a local scope variable to capture the index for use inside the closure below
-      var current_index = index;
-      console.log("Setting up hook ups for item-" + current_index);
-      NEOCAST.data.player(item_key,           function(value) { console.log("Change event for " + item_key + " with a value of "      + value + " into dom id #item-" + current_index); $("#item-" + current_index).html(value); });
-      NEOCAST.data.player(item_key + "_desc", function(value) { console.log("Change event for " + item_key + "_desc with a value of " + value + " into dom id #desc-" + current_index); $("#desc-" + current_index).html(value); });
-      NEOCAST.data.player(item_key + "_cal",  function(value) { console.log("Change event for " + item_key + "_cal with a value of "  + value + " into dom id #cal-"  + current_index); $("#cal-"  + current_index).html(value); });
+      var b = a;
+      console.log("Setting up hook ups for item-" + b);
+      NEOCAST.data.player(item_key,           function(value) { console.log("Change event for " + item_key + " with a value of "      + value + " into dom id #item-" + b); $("#item-" + b).html(value); });
+      NEOCAST.data.player(item_key + "_desc", function(value) { console.log("Change event for " + item_key + "_desc with a value of " + value + " into dom id #desc-" + b); $("#desc-" + b).html(value); });
+      NEOCAST.data.player(item_key + "_cal",  function(value) { console.log("Change event for " + item_key + "_cal with a value of "  + value + " into dom id #cal-"  + b); $("#cal-"  + b).html(value); });
     });
   }
 
