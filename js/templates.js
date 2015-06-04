@@ -57,7 +57,7 @@ $(document).ready(function()
     //    in the metadata using the value retrieved as the
     //    root of the key name.
 
-    NEOCAST.data.player('item-' + current_index, function(item_key)
+    NEOCAST.data.player('item-' + index, function(item_key)
     {
       // Create a local scope variable to capture the index for use inside the closure below
       var current_index = index;
