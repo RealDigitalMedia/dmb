@@ -65,7 +65,7 @@ $(document).ready(function()
       $("#item-" + index).html(label);
       $("#desc-" + index).html(desc);
       $("#cal-"  + index).html(cal);
-    );
+    });
   }
 
   $(legend).each(function(index, templateData)
